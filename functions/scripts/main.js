@@ -1,8 +1,8 @@
 // function declaration
-function functionName() {
+// function functionName() {
 
-}
-functionName()
+// }
+// functionName()
 
 // function without a parameter and return
 function square(){
@@ -20,32 +20,34 @@ function addTwoNumbers() {
 }
 addTwoNumbers()
 
-function printFullName () {
+function printFullNameRVOne () {
     let firstName = 'Ahrkar'
     let lastName = 'kyaw'
     let space = ' '
     let fullName = firstName + space + lastName
     console.log(fullName)
+    console.log("hi");
 }
-printFullName()
+printFullNameRVOne()
 
 // function returning value
-function printFullName () {
+function printFullNameRVTwo () {
     let firstName = 'Ahrkar'
     let lastName = 'kyaw'
     let space = ' '
     let fullName = firstName + space + lastName
+    console.log("hi");
     return fullName
 }
-console.log(printFullName())
+console.log(printFullNameRVTwo())
 
-function addTwoNumbers() {
+function addTwoNumbersTwo() {
     let numOne = 10
     let numTwo = 20
     let total = numOne + numTwo
     return total
 }
-console.log(addTwoNumbers())
+console.log(addTwoNumbersTwo())
 
 // function with a parameter
 function functionName(parm1){
@@ -58,10 +60,10 @@ function areaOfCircle(r) {
 }
 console.log(areaOfCircle(10))
 
-function square(number) {
+function squareOne(number) {
     return number * number
 }
-console.log(square(10))
+console.log(squareOne(10))
 
 // function with two parameters
 
@@ -161,7 +163,7 @@ console.log(squareTwo(2))
 
 let squaredNum = (function(n) {
     return n * n
-})(10)
+})(10000)
 console.log(squaredNum)
 
 // arrow function
@@ -190,10 +192,10 @@ const changeToUpperCase = arr => {
 const countries = ['Filand', 'Sweden', 'Norway', 'Denmark' , 'Iceland']
 console.log(changeToUpperCase(countries))
 
-const printFullNameOne = (firstName, lastName) => {
-    return `${firstName} ${lastName}`
-}
-console.log(printFullName('Ahrkar','Kyaw'))
+// const printFullNameOne = (firstName, lastName) => {
+//     return `${firstName} ${lastName}`
+// }
+// console.log(printFullName('Ahrkar','Kyaw'))
 // The above function has only the return statement, therefore, we can explicitly return it as follows.
 const printFullNameTwo = (firstName, lastName) => `${firstName} ${lastName}`
 
