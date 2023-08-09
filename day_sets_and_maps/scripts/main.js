@@ -18,9 +18,9 @@ const setOfLanguages = new Set(languages)
 console.log(setOfLanguages)
 
 // Set is an iterable object and we can iterate through each elements.
-// for (const language of SetOfLanguages) {
-//     console.log(language)
-// }
+for (const language of setOfLanguages) {
+    console.log(language)
+}
 
 // Adding an element to a set
 
