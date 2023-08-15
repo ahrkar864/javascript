@@ -26,5 +26,6 @@ try {
 // reference error not defined
 // a syntax error occured
 // uncaughted syntax error: unexpected identifier
+// Uncaught TypeError: num.toLowerCase is not a function
 
   
