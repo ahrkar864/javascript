@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solar System: Document Object Model: 30 Days Of JavaScript</title>
+        <!-- <style>
+            body {
+                background-image: url('./images/galaxy.gif'); /* Replace 'galaxy.jpg' with the actual image file path */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+        </style> -->
+</head>
+<body class="galaxy">
+    <header>
+        <h1>Calculate a weight of an object on a planet</h1>
+        <input type="text" id="mass" placeholder="Mass in Kilogram">
+        <select id="planet">
+            <option value="none">-- select planet --</option>
+            <option value="mercury">Mercury</option>
+            <option value="venus">Venus</option>
+            <option value="earth">Earth</option>
+            <option value="mars">Mars</option>
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+            <option value="uranus">Uranus</option>
+            <option value="neptune">Neptune</option>
+            <option value="pluto">Pluto</option>
+            <option value="moon">Moon</option>
+            <option value="sun">Sun</option>
+        </select>
+        <button onclick="calculateWeight()">Calculate weight</button>
+    </header>
+    <main>
+        <div class="flex-container">
+            <div class="flex-item image">
+                <img style="width:100px;  " src="" class="planet-image" id="planetImage">
+            </div>
+            <div class="flex-item description bg-black  " id="result"></div>
+        </div>
+    </main>
+
+    <script>
+        function calculateWeight() {
+            const mass = parseFloat(document.getElementById("mass").value);
+            const planet = document.getElementById("planet").value;
+            let surfaceGravity = 0;
+            let planetImageSrc = '';
+
+            // Define surface gravity values for different planets and set planet images
+            switch (planet) {
+                case "mercury":
+                    surfaceGravity = 3.7;
+                    planetImageSrc = "./images/mercury.png";
+                    break;
+                case "venus":
+                    surfaceGravity = 8.87;
+                    planetImageSrc = "./images/venus.png";
+                    break;
+                case "earth":
+                    surfaceGravity = 9.81;
+                    planetImageSrc = "./images/earth.png";
+                    break;
+                case "mars":
+                    surfaceGravity = 3.71;
+                    planetImageSrc = "./images/mars.png";
+                    break;
+                case "jupiter":
+                    surfaceGravity = 24.79;
+                    planetImageSrc = "./images/jupiter.png";
+                    break;
+                case "saturn":
+                    surfaceGravity = 10.44;
+                    planetImageSrc = "./images/saturn.png";
+                    break;
+                case "uranus":
+                    surfaceGravity = 8.69;
+                    planetImageSrc = "./images/uranus.png";
+                    break;
+                case "neptune":
+                    surfaceGravity = 11.15;
+                    planetImageSrc = "./images/neptune.png";
+                    break;
+                case "pluto":
+                    surfaceGravity = 0.62;
+                    planetImageSrc = "./images/pluto.png";
+                    break;
+                case "moon":
+                    surfaceGravity = 1.625;
+                    planetImageSrc = "./images/moon.png";
+                    break;
+                case "sun":
+                    surfaceGravity = 274;
+                    planetImageSrc = "./images/sun.png";
+                    break;
+                default:
+                    surfaceGravity = 0;
+                    break;
+            }
+
+            const weight = mass * surfaceGravity;
+            document.getElementById("result").innerText = `Weight on ${planet}: ${weight.toFixed(2)} N`;
+            document.getElementById("planetImage").src = planetImageSrc;
+        }
+    </script>
+</body>
+</html>
