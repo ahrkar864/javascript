@@ -1,5 +1,6 @@
 // destructing arrays
 const numbers = [1, 2, 3]
+console.log(numbers)
 let [numOne, numTwo] = numbers
 
 console.log(numOne, numTwo)
@@ -43,9 +44,9 @@ console.log(secondPersonOne, fourthPersonOne)
 
 // We can use default value in case the value of array for that index is undefined:
 
-const namesThree = [undefined, 'Brook', 'David']
+const namesThree = ['Asabeneh', 'Brook', 'David']
 let [
-  firstPersonThree = 'Asabeneh',
+  firstPersonThree ,
   secondPersonThree,
   thirdPersonThree,
   fourthPersonThree = 'John'
@@ -74,8 +75,8 @@ const fullStackOne = [
     ['Node', 'Express', 'MongoDB']
 ]
   
-for(const [first, second, third] of fullStackOne) {
-  console.log(first, second, third)
+for(const [first, second, third, four] of fullStackOne) {
+  console.log(first, second, third, four)
 }
 
 // Destructuring Object
@@ -219,7 +220,7 @@ for (const {task, time, completed} of todoList){
 // When we destructure an array we use the spread operator(...) to get the rest elements as array. In addition to that we use spread operator to spread array elements to another array.
 
 const numsTwo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let [num1Two, num2Two, num3Two, ...restTwo] = nums
+let [num1Two, num2Two, num3Two, ...restTwo] = numsTwo
 console.log(num1Two, num2Two, num3Two)
 console.log(restTwo)
 
@@ -241,8 +242,12 @@ const countriesTwo = [
   console.log(nordicCountries)
 
 // spread operator to copy array
-const evens = [0, 2, 4, 6, 8, 10]
-const evenNumbers = [...evens]
+let evens = [0, 2, 4, 6, 8, 10]
+let odd = [1,3,5]
+const aaaaa = evens + odd
+
+const evenNumbers = [...evens] + [...odd]
+console.log('aaaaa === ' + aaaaa);
 
 const odds = [1, 3, 5, 7, 9]
 const oddNumbers = [...odds]
@@ -273,7 +278,7 @@ const user = {
 
 // Modifying or changing the object while copying
 
-const copiedUser = {...user, title:'instructor'}
+const copiedUser = {user, title:'instructor'}
 console.log(copiedUser)
 
 // Spread operator with arrow function

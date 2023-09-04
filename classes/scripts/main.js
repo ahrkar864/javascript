@@ -22,7 +22,7 @@ console.log(person)
 
 class PersonTwo {
     constructor(firstName, lastName, age, country, city) {
-      console.log(this) // Check the output from here
+      // console.log(this) // Check the output from here
       this.firstName = firstName
       this.lastName = lastName
       this.age = this.age
@@ -47,6 +47,7 @@ class PersonTwo {
 
 const personFive = new PersonTwo('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
 
+console.log("personFive=")
 console.log(personFive)
 
 // Default values with constructor
@@ -114,6 +115,7 @@ class PersonClass {
         let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
         return info
       }
+      
       static favoriteSkill() {
         const skills = ['HTML', 'CSS', 'JS', 'React', 'Python', 'Node']
         const index = Math.floor(Math.random() * skills.length)
@@ -266,5 +268,9 @@ class Student extends Person {
 //   console.log(s2.saySomething())
 //   console.log(s2.getFullName())
 //   console.log(s2.getPersonInfo())
+
+function sayHello() {
+    console.log("hello world")
+}
 
 
